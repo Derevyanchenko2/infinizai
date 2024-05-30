@@ -1,0 +1,41 @@
+.sponsors {
+    padding: 130px 0;
+    background-color: #FDD04A;
+}
+.sponsors-heading {
+    max-width: 596px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center
+}
+.sponsors-heading__title {
+    margin-bottom: 27px;
+    position: relative;
+}
+.sponsors-title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: #222730;
+    &__decor{
+        position: absolute;
+        right: 105px;
+        bottom: -15px;
+    }
+}
+
+.sponsors-heading__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #555555;
+}
+
+.sponsors-logos {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+}
+

@@ -1,0 +1,32 @@
+.customize-wrapper {
+    display: flex;
+    align-items: center;
+}
+.customize-image {
+    margin-right: 128px;
+}
+.customize-content {
+    max-width: 596px;
+    width: 100%;
+    padding-top: 82px;
+}
+.customize-content__title {
+    margin-bottom: 38px;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.customize-swiper{
+    margin-top: 54px;
+}
+.swiper-slide-active {
+    overflow: visible;
+    max-width: 196px;
+    max-height: 124px;
+    padding: 11px;
+    border-radius: 20px;
+    background-color: #3b3d46;
+}

@@ -1,0 +1,70 @@
+.join {
+    position: relative;
+    background-image: url(../images/join-bg-image.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.join-info {
+    max-width: 847px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.join-info__title {
+    margin-bottom: 32px;    
+    position: relative;
+}
+.join-title {
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 82px;
+    text-align: center;
+    color: #141820;
+}
+
+.join-info__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #555555;
+    margin-bottom: 45px;
+}
+
+.join-form {
+    margin: 0 auto;
+    max-width: 670px;
+    position: relative;
+}
+.join-form__input {
+    padding: 26px 13px;
+    max-width: 670px;
+    width: 100%;
+    min-height: 80px;
+    background: #FFFFFF;
+    border: none;
+    &::placeholder {
+        font-family: 'Orbitron';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+        color: #555555;
+    }    
+}
+
+.subscribe-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    min-height: 70px;
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+}
