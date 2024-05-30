@@ -21,6 +21,38 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
+// modal window
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('myModal').style.display = "none";
+  
+  var playIcon = document.getElementById('playIcon');
+  var closeModal = document.getElementById('closeModal');
+  var myModal = document.getElementById('myModal');
+  var videoIframe = document.getElementById('videoIframe');
+
+  playIcon.onclick = function() {
+      console.log('Play icon clicked');
+      myModal.style.display = "flex";
+      videoIframe.src = "https://www.youtube.com/embed/NWcmKxBHDFQ";
+  };
+
+  closeModal.onclick = function() {
+      myModal.style.display = "none";
+      videoIframe.src = "";
+  };
+
+  window.onclick = function(event) {
+      if (event.target == myModal) {
+          myModal.style.display = "none";
+          videoIframe.src = "";
+      }
+  };
+});
+ 
+
+
+
 // slider
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.customize-swiper', {

@@ -15,12 +15,18 @@
     margin-bottom: 32px;    
     position: relative;
 }
+
 .join-title {
     font-weight: 400;
     font-size: 72px;
     line-height: 82px;
     text-align: center;
     color: #141820;
+}
+.join-title__decor{
+    position: absolute;
+    right: 46px;
+    bottom: -16px;
 }
 
 .join-info__text {
@@ -67,4 +73,13 @@
     text-align: center;
     color: #FFFFFF;
     border: none;
+}
+
+.join-form__input:focus {
+    outline: none;
+    border-color: #007bff;
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
 }

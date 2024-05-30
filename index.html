@@ -203,25 +203,48 @@
         </div>
     </div>
 </section>
-        <section class="section gaming">
-    <div class="container">
-        <div class="gaming-wrapper">
-            <div class="gaming-content">
-                <div class="section-subtitle gaming-content__subtitle">🔥 FUTURE OF ESPORTS</div>
-                <h2 class="section-title gaming-content__title">
-                    The New Era Of <br> Cloud Gaming Here
-                </h2>
-                <p class="section-text gaming-content__text">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.
-                </p>
-                <a href="#" class="btn-primary gaming-btn btn">Explore More</a>
-            </div>
-            <div class="gaming-images">
-                <img src="./images/gaming-image.png" alt="gaming image" id="video-thumbnail">
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Section</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="section gaming">
+        <div class="container">
+            <div class="gaming-wrapper">
+                <div class="gaming-content">
+                    <div class="section-subtitle gaming-content__subtitle">🔥 FUTURE OF ESPORTS</div>
+                    <h2 class="section-title gaming-content__title">
+                        The New Era Of <br> Cloud Gaming Here
+                    </h2>
+                    <p class="section-text gaming-content__text">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.
+                    </p>
+                    <a href="#" class="btn-primary gaming-btn btn">Explore More</a>
+                </div>
+                <div class="gaming-images">
+                    <div class="video-thumbnail" id="videoThumbnail">
+                        <img src="./images/gaming-image.png" alt="gaming image">
+                        <div class="play-icon" id="playIcon"></div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <iframe id="videoIframe" width="800" height="420" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
-</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
         <section class="customize">
     <div class="container">
@@ -338,7 +361,7 @@
     <div class="join-info">
         <div class="join-info__title">
             <h3 class="join-title">Join the largest gaming community</h3>
-            <img class="sponsors-title__decor" src="./images/title-decor-blue.svg" alt="title-decor">
+            <img class="join-title__decor" src="./images/title-decor-blue.svg" alt="title-decor">
         </div>
         <p class="join-info__text section-text">Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus lectus. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesu ada feugiat. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo</p>
         <form method="get" action="" name="email-form" class="join-form">

@@ -1,29 +1,69 @@
 .gaming {
     background-color: #000000;
+    position: relative;
 }
 .gaming-wrapper {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
+
 .gaming-content {
     max-width: 732px;
     width: 100%;
     margin-right: 95px;
 }
-.gaming-content__title {
-    margin-bottom: 32px;
-}
-.gaming-btn{
-    margin-top: 54px;
+.gaming-content__text {
+    padding: 52px 0;
 }
 
-// .gaming-hero-images {
-// }
-// .gaming-modal {
-// }
-// .gaming-modal-content {
-// }
-// .gaming-close {
-// }
+.gaming-images {
+    position: relative;
+    max-width: 491px;
+}
 
+.video-thumbnail {
+    position: relative;
+}
 
+.gaming-image {
+    width: 100%;
+    height: auto;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 129px;
+    height: 129px;
+    cursor: pointer;
+    background: url('../images/play-icon.svg') no-repeat center center;
+    background-size: cover;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    
+}
+.close {
+    position: absolute;
+    top: 130px;
+    right: 60px;
+    color: #ffffff;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 1;
+}
