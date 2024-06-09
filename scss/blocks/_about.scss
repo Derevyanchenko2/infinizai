@@ -1,0 +1,36 @@
+.main-screen{
+    padding-top: 190px;
+    padding-bottom: 126px;
+    background-image: url(../images/main-bg-image.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.about-heading {
+    text-align: center;
+}
+.about-title{
+    color: #222730;
+    font-size: 64px;
+    line-height: 74px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.breadcrumb {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.breadcrumb-link{
+    margin-left: 8px;
+    color: #222;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+}
+.active-page__link{
+    color: #57b8ff;
+}
+

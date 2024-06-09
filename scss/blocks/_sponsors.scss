@@ -11,7 +11,7 @@
 }
 .sponsors-heading__title {
     margin-bottom: 27px;
-    position: relative;
+    // position: relative;
 }
 .sponsors-title {
     font-weight: 400;
@@ -19,7 +19,6 @@
     line-height: 58px;
     color: #222730;
     &__decor{
-        position: absolute;
         right: 105px;
         bottom: -15px;
     }
