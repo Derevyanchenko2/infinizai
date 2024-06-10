@@ -1,0 +1,52 @@
+.player {
+    padding-bottom: 100px;
+}
+
+.player-wrapper {
+    max-width: 874px;
+    width: 100%;
+    margin: 0 auto;
+}
+.player-top {
+    display: flex;
+    margin-bottom: 50px;
+    align-items: center;
+}
+.player-top__info {
+    width: 575px;
+    max-height: 370px;
+    max-width: 575px;
+    margin-right: -139px;
+    padding: 105px 70px;
+    border-style: solid;
+    border-width: 2.23px;
+    border-color: #fccd3e;
+    text-align: center;
+}
+.player-info__name {
+    margin-bottom: 15px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.player-info__role {
+    color: #57b8ff;
+    font-size: 31px;
+    line-height: 31px;
+    font-weight: 700;
+}
+.player-top__image {
+    position: relative;
+    z-index: -1;
+    img{
+        max-width: 443px;
+        min-height: 443px;
+    }
+}
+
+.player-text {
+    margin-bottom: 30px;
+    color: #dfdfdf;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+}
