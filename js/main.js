@@ -198,3 +198,46 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('playerName').innerText = 'Player Not Found';
     }
 });
+
+
+
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    let isValid = true;
+
+    const firstName = document.getElementById('first-name');
+    const lastName = document.getElementById('last-name');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+
+    if (firstName.value.trim() === '') {
+        isValid = false;
+        alert('First Name is required');
+    }
+
+    if (lastName.value.trim() === '') {
+        isValid = false;
+        alert('Last Name is required');
+    }
+
+    if (email.value.trim() === '') {
+        isValid = false;
+        alert('Email Address is required');
+    } else if (!validateEmail(email.value)) {
+        isValid = false;
+        alert('Please enter a valid email address');
+    }
+
+    if (message.value.trim() === '') {
+        isValid = false;
+        alert('Message is required');
+    }
+
+    if (!isValid) {
+        event.preventDefault();
+    }
+});
+
+function validateEmail(email) {
+    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return re.test(email);
+}
