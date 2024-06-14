@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>infinizai</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!--==== Google Fonts ===-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!--===Main CSS====-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+    <body>
+        <section class="hero-section">
+            <div class="mobileMenu-overlay">
+    <div class="mobileMenu">
+        <button class="mobileMenu-close">&times;</button>
+        <div class="mobileMenu-container">
+            <ul class="header-menu">
+                <li class="mobileMenu-item">
+                    <a class="mobileMenu-link" href="#">Home</a>
+                </li>
+                <li class="mobileMenu-item">
+                    <a class="mobileMenu-link" href="#">About</a>
+                </li>
+                <li class="mobileMenu-item">
+                    <a class="mobileMenu-link" href="#">Team</a>
+                </li>
+                <li class="mobileMenu-item">
+                    <a class="mobileMenu-link" href="#">Shop</a>
+                </li>
+                <li class="mobileMenu-item dropdown">
+                    <a class="mobileMenu-link dropdown-toggle" href="#">Pages</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./styleguide.html">Styleguide</a></li>
+                        <li><a href="./licenses.html">Licenses</a></li>
+                        <li><a href="./changelog.html">Changelog</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<header class="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <a href="#" class="logo">
+               <img src="./images/logo.svg" alt="logo">
+            </a>
+            <ul class="header-menu menu">
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./about-page.html">About</a>
+                </li>
+                <li>
+                    <a href="./team-page.html">Team</a>
+                </li>
+                <li>
+                    <a href="./products-page.html">Shop</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Pages</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./blog-page.html">Blog</a></li>
+                        <li><a href="./styleguide.html">Styleguide</a></li>
+                        <li><a href="./licenses.html">Licenses</a></li>
+                        <li><a href="./changelog.html">Changelog</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="header-right">
+                <a href="#" class="cart-wrapper">
+                    <img src="./images/basket.svg" alt="basket">
+                    <span class="basket-num">0</span>
+                </a>
+                <a href="./contact-page.html" class="contact-btn header-button">Contact Us</a>
+            </div>
+            <div class="burger open-menu-js">
+                <div class="open-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+            <main class="hero hero-about main-screen">
+    <div class="container">
+        <div class="hero-heading">
+            <h1 class="hero-heading__title section-title">Single Team</h1>
+            <div class="breadcrumb">
+                <img src="./images/breadcrumb-icon.svg" alt="breadcrumb-icon">
+                <div class="breadcrumb-links">
+                    <a class="breadcrumb-link" href="index.html">Home</a> 
+                    /
+                    <a class="breadcrumb-link active-page__link" href="/products-page.html">
+                        Single Team
+                    </a> 
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+        </section>
+        <section class="section product-detail">
+    <div class="container">
+        <div class="product-wrapper">
+            <div class="product-image">
+                <img id="product-image" src="" alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h3 id="product-name" class="product-info__name">Product Name</h3>
+                <div class="product-info__price" id="product-price">$0.00 USD</div>
+                <form class="product-form">
+                    <div class="product-form__group">
+                        <label class="product-form__label" for="size">Size</label>
+                        <select id="size" name="size" class="product-form__select" required>
+                            <option value="">Select Size</option>
+                            <option value="small">S</option>
+                            <option value="medium">M</option>
+                            <option value="large">L</option>
+                        </select>
+                    </div>
+                    <div class="product-form__group">
+                        <label class="product-form__label" for="quantity">Quantity</label>
+                        <input id="quantity" name="quantity" type="number" class="product-form__input" value="1" min="1" max="1000" required>
+                    </div>
+                    <button class="product-btn btn-primary btn">Add To Cart</button>
+                </form>
+            </div>
+        </div>
+        <div class="product-tabs">
+            <div class="product-buttons">
+                <button class="tablinks product-button active" onclick="openTab(event, 'Product')">Product Description</button>
+                <button class="tablinks product-button" onclick="openTab(event, 'Info')">Additional Info</button>
+                <button class="tablinks product-button" onclick="openTab(event, 'Shipping')">Shipping</button>
+            </div>
+            <div id="Product" class="tabcontent" style="display: block;">
+                <p class="section-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat.
+                    <br>
+                    <br>
+                    Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada.
+                    <br>
+                    <br>
+                    Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+                </p>
+            </div>
+            <div id="Info" class="tabcontent" style="display: none;">
+                <p class="section-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat.
+                    <br>
+                    <br>
+                    Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada.
+                    <br>
+                    <br>
+                    Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+                </p>
+            </div>
+            <div id="Shipping" class="tabcontent" style="display: none;">
+                <p class="section-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat.
+                    <br>
+                    <br>
+                    Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.Vivamus suscipit tortor eget felis портtitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada.
+                    <br>
+                    <br>
+                    Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="section related-products">
+    <div class="container">
+        <div class="products-heading">
+            <div class="section-subtitle shop-heading__subtitle">🔥 FUTURE OF ESPORTS</div>
+            <h2 class="section-title">Related Products</h2>
+        </div>
+        <div class="products-wrapper">
+            <div class="products-row">
+                <div class="product-column">
+                    <div class="product-item">
+                        <div class="product-item__img">
+                            <img src="./images/products-img/1.png" alt="product-img">
+                        </div>
+                        <div class="product-item__content">
+                            <h3 class="product-item__name">3-Piece Gameling Utensil Set</h3>
+                            <div class="product-item__price">$19.99 USD</div>
+                        </div>
+                        <a href="single-product.html?id=1" class="view-product-button btn-primary btn">View Product</a>
+                    </div>
+                </div>
+                <div class="product-column">
+                    <div class="product-item">
+                        <div class="product-item__img">
+                            <img src="./images/products-img/2.png" alt="product-img">
+                        </div>
+                        <div class="product-item__content">
+                            <h3 class="product-item__name">Wall Top Tshirt Frame</h3>
+                            <div class="product-item__price">$19.99 USD</div>
+                        </div>
+                        <a href="single-product.html?id=2" class="view-product-button btn-primary btn">View Product</a>
+                    </div>
+                </div>
+                <div class="product-column">
+                    <div class="product-item">
+                        <div class="product-item__img">
+                            <img src="./images/products-img/3.png" alt="product-img">
+                        </div>
+                        <div class="product-item__content">
+                            <h3 class="product-item__name">Drawer Unit On Casters</h3>
+                            <div class="product-item__price">$19.99 USD</div>
+                        </div>
+                        <a href="single-product.html?id=3" class="view-product-button btn-primary btn">View Product</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="join section">
+    <div class="join-info">
+        <div class="join-info__title">
+            <h3 class="join-title">Join the largest gaming community</h3>
+            <img class="join-title__decor" src="./images/title-decor-blue.svg" alt="title-decor">
+        </div>
+        <p class="join-info__text section-text">Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus lectus. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesu ada feugiat. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo</p>
+        <form method="get" action="" name="email-form" class="join-form">
+            <input class="join-form__input join-input" type="email" placeholder=" Your Email Address" required>
+            <input class="subscribe-btn btn-primary btn" type="submit" type="text" value="Subscribe Now">
+        </form>
+    </div>
+</section>
+        <footer class="footer">
+    <div class="container">
+     
+        <div class="footer-wrapper">
+            <div class="footer-section">
+                <a href="#" class="logo">
+                    <img src="./images/logo.svg" alt="logo">
+                </a>
+                <p class="footer-description">Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl nunc quam ac sed turpis volutpat. Cursus sed massa non.</p>
+            </div>
+            <div class="footer-section">
+                <h2 class="footer-heading">Menu Items</h2>
+                <ul class="footer-menu">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2 class="footer-heading">Other Pages</h2>
+                <ul class="footer-menu">
+                    <li><a href="#">Styleguide</a></li>
+                    <li><a href="#">Changelog</a></li>
+                    <li><a href="#">Licenses</a></li>
+                    <li><a href="#">Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2 class="footer-heading">Social Icons</h2>
+                <div class="social-icons">
+                    <span class="icon"></span>
+                    <span class="icon"></span>
+                    <span class="icon"></span>
+                    <span class="icon"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a class="">Copyright by 2021 Flowzai</ф>
+    </div>
+</footer>
+        <!-- ===Scripting In=== -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

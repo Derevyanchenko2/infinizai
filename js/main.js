@@ -201,43 +201,85 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-document.querySelector('.contact-form').addEventListener('submit', function(event) {
-    let isValid = true;
+// Получаем параметры URL
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get('id');
 
-    const firstName = document.getElementById('first-name');
-    const lastName = document.getElementById('last-name');
-    const email = document.getElementById('email');
-    const message = document.getElementById('message');
+// Данные о продуктах
+const products = {
+    1: {
+        name: '3-Piece Gameling Utensil Set',
+        price: '$19.99 USD',
+        image: './images/products-img/1.png',
+        description: 'Detailed description of the 3-Piece Gameling Utensil Set.'
+    },
+    2: {
+        name: 'Wall Top Tshirt Frame',
+        price: '$19.99 USD',
+        image: './images/products-img/2.png',
+        description: 'Detailed description of the Wall Top Tshirt Frame.'
+    },
+    3: {
+        name: 'Drawer Unit On Casters',
+        price: '$19.99 USD',
+        image: './images/products-img/3.png',
+        description: 'Detailed description of the Drawer Unit On Casters.'
+    },
+    4: {
+        name: 'Wall Changing Table Mount',
+        price: '$19.99 USD',
+        image: './images/products-img/4.png',
+        description: 'Detailed description of the Wall Changing Table Mount.'
+    },
+    5: {
+        name: 'Intermedi Connect Cord',
+        price: '$19.99 USD',
+        image: './images/products-img/5.png',
+        description: 'Detailed description of the Intermedi Connect Cord.'
+    },
+    6: {
+        name: 'Duvet Cover And Pillowsham(s)',
+        price: '$19.99 USD',
+        image: './images/products-img/6.png',
+        description: 'Detailed description of the Duvet Cover And Pillowsham(s).'
+    }
+};
 
-    if (firstName.value.trim() === '') {
-        isValid = false;
-        alert('First Name is required');
+// Проверяем, существует ли продукт с таким ID
+if (products[productId]) {
+    const product = products[productId];
+    document.getElementById('product-name').innerText = product.name;
+    document.getElementById('product-price').innerText = product.price;
+    document.getElementById('product-image').src = product.image;
+    document.getElementById('product-description').innerText = product.description;
+    document.getElementById('product-name-breadcrumb').innerText = product.name;
+}else {
+    document.getElementById('playerName').innerText = 'Player Not Found';
+}
+
+
+
+// tabs
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
     }
 
-    if (lastName.value.trim() === '') {
-        isValid = false;
-        alert('Last Name is required');
+    tablinks = document.getElementsByClassName("product-button");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    if (email.value.trim() === '') {
-        isValid = false;
-        alert('Email Address is required');
-    } else if (!validateEmail(email.value)) {
-        isValid = false;
-        alert('Please enter a valid email address');
-    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
 
-    if (message.value.trim() === '') {
-        isValid = false;
-        alert('Message is required');
-    }
-
-    if (!isValid) {
-        event.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+    var activeTab = document.querySelector('.product-button.active');
+    if (activeTab) {
+        activeTab.click();
     }
 });
-
-function validateEmail(email) {
-    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    return re.test(email);
-}
