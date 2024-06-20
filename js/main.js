@@ -54,24 +54,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// slider
-document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.customize-swiper', {
-      direction: 'horizontal',
-      loop: true,
-      slidesPerView: 3,
-      spaceBetween: 30, 
-      speed:800,
-      pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-      },
-      navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-      },
-  });
+//customize slider
+const swiper = new Swiper('.customize-swiper', {
+    direction: 'horizontal',
+    loop: false,  
+    slidesPerView: 3,
+    spaceBetween: 30, 
+    speed:800,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });
+
 
 //The code updates a player's profile page based on the 'id' in the URL, displaying the player's name, role, image, and description.
 document.addEventListener('DOMContentLoaded', function() {

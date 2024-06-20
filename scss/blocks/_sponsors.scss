@@ -1,5 +1,4 @@
 .sponsors {
-    padding: 130px 0;
     background-color: #FDD04A;
 }
 .sponsors-heading {
@@ -11,7 +10,6 @@
 }
 .sponsors-heading__title {
     margin-bottom: 27px;
-    // position: relative;
 }
 .sponsors-title {
     font-weight: 400;
@@ -23,18 +21,23 @@
         bottom: -15px;
     }
 }
-
-.sponsors-heading__text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    text-align: center;
-    color: #555555;
-}
-
 .sponsors-logos {
     display: flex;
     align-items: center;
     gap: 33px;
+    @media(max-width:1200px){
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    @media(max-width:460px){
+        gap: 15px;
+    }
 }
-
+.sponsors-logo{
+    @media(max-width:460px){
+        img{
+            max-width: 157px;
+        }
+    }
+}

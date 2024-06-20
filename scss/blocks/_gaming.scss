@@ -12,14 +12,51 @@
     max-width: 732px;
     width: 100%;
     margin-right: 95px;
+    @media(max-width:1350px){
+        max-width: 630px;
+        width: 100%;
+        margin-right: 60px;
+    }
+    @media(max-width:1200px){
+        max-width: 508px;
+        margin-right: 45px;
+    }
+    @media(max-width:992px){
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+}
+.gaming-content__title{
+    @media(max-width:992px){
+        width: 100%;
+        max-width: 100%;
+        br{
+            display: none;
+        }
+    }
 }
 .gaming-content__text {
     padding: 52px 0;
+    @media(max-width:992px){
+        padding: 35px 0;
+    }
+    @media(max-width:768px){
+        padding: 25px 0;
+    }
 }
 
 .gaming-images {
     position: relative;
     max-width: 491px;
+    @media(max-width:1350px){
+        max-width: 480px;
+    }
+    @media(max-width:1200px){
+        max-width: 403px;
+    }
+    @media(max-width:993px){
+        max-width: 100%;
+    }
 }
 
 .video-thumbnail {
@@ -41,6 +78,10 @@
     cursor: pointer;
     background: url('../images/play-icon.svg') no-repeat center center;
     background-size: cover;
+    @media(max-width:768px){
+        width: 105px;
+        height: 105px;
+    }
 }
 
 .modal {
