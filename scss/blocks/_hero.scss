@@ -3,6 +3,10 @@
 }
 .hero {
     padding-top: 291px;
+    @media(max-width:992px){
+        padding-top: 140px;
+        // padding-bottom: 80px;
+    }
 }
 .hero-socials-links{
     max-width: 25px;
@@ -13,6 +17,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media(max-width:1200px){
+        display: none;
+    }
 }
 .hero-socials-link{
     margin-top: 120px;
@@ -40,10 +47,16 @@
     max-width: 46%;
     min-height: 100%;
     background-color: #57b8ff;
+    @media(max-width: 992px){
+        display: none;
+    }
 }
 
 .hero-row {
     display: flex;
+    @media(max-width:992px){
+        flex-direction: column;
+    }
 }
 .hero-content {
     max-width: 660px;
@@ -51,6 +64,16 @@
 }
 .hero-title{
     margin-bottom: 45px;
+
+    @media(max-width:1200px){
+        margin-bottom: 30px;
+    }
+
+    @media(max-width:992px){
+        br{
+            display: none;
+        }
+    }
     span{
         position: relative;
         &:before{
@@ -61,20 +84,49 @@
             right: -15px;
             width: 405px;
             height: 15px;
+            @media(max-width:1200px){
+                width: 350px;
+                bottom: -15px;
+            }
+            @media(max-width:992px){
+                right: 185px;
+            }
+            @media(max-width:768px){
+                bottom: -8px;
+                right: -3px;
+                width: 208px;
+            }
+            @media(max-width:541px){
+                right: 117px;
+                width: 196px;
+            }
         }
     }
 }
-
+.hero-text{
+    @media(max-width:768px){
+        margin-bottom: 20px;
+    }
+}
 .hero-buttons {
     margin-top: 53px;
     display: flex;
     align-items: center;
+    @media(max-width: 768px){
+        margin-top: 0;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 .btn-primary {
     padding: 21px 34px;
 }
 .header-btn{
     margin-right: 41px;
+    @media(max-width: 768px){
+      margin-right: 0;
+      width: 100%;
+    }
 }
 .btn-secondary {
     margin-left: 40px;
@@ -86,8 +138,16 @@
     &:hover{
         color: #578FFF;
     }
+    @media(max-width: 768px){
+        margin-top: 10px;
+        margin-left: 0;
+    }
 }
-
+@media(max-width:992px){
+    .hero-images{
+        margin-top: 40px;
+    }
+}
 
 .main-screen{
     padding-top: 190px;

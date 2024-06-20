@@ -1,47 +1,16 @@
 // burger-menu
-document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector('.burger');
-    const mobileMenuOverlay = document.querySelector('.mobileMenu-overlay');
-    const closeBtn = document.querySelector('.mobileMenu-close');
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-    const toggleMobileMenu = () => {
-        mobileMenuOverlay.classList.toggle('open');
-    };
-
-    const closeMobileMenu = () => {
-        mobileMenuOverlay.classList.remove('open');
-    };
-
-    const toggleDropdown = (event) => {
-        event.preventDefault();
-        event.currentTarget.closest('.dropdown').classList.toggle('open');
-    };
-
-    const closeAllDropdowns = () => {
-        dropdownToggles.forEach(toggle => {
-            toggle.closest('.dropdown').classList.remove('open');
-        });
-    };
-
-    burger.addEventListener('click', toggleMobileMenu);
-    closeBtn.addEventListener('click', closeMobileMenu);
-
-    document.addEventListener('click', (event) => {
-        if (!mobileMenuOverlay.contains(event.target) && !burger.contains(event.target)) {
-            closeMobileMenu();
-        }
-
-        if (!event.target.closest('.dropdown')) {
-            closeAllDropdowns();
-        }
-    });
-
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', toggleDropdown);
-    });
-});
-
+document.querySelector(".open-menu-js").addEventListener("click", function() {
+    var mobileMenuOverlay = document.querySelector(".mobileMenu-overlay");
+    mobileMenuOverlay.classList.add("open");
+    document.body.style.overflowX = "hidden";
+  });
+  
+  document.querySelector(".mobileMenu-close").addEventListener("click", function() {
+    var mobileMenuOverlay = document.querySelector(".mobileMenu-overlay");
+    mobileMenuOverlay.classList.remove("open");
+    document.body.style.overflowX = "auto";
+  });
+  
 
 //change color when scrolling
 let header = document.querySelector(".header");
@@ -104,11 +73,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// 
+//The code updates a player's profile page based on the 'id' in the URL, displaying the player's name, role, image, and description.
 document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
     const playerId = params.get('id');
-    
+
     const players = {
         1: {
             name: 'Esther Howard',
@@ -201,11 +170,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// Получаем параметры URL
+
+// The code updates a product page based on the 'id' in the URL, displaying the product's name, price, image, and description. 
+// If the product is not found, it shows a 'Player Not Found' message.
+
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id');
 
-// Данные о продуктах
 const products = {
     1: {
         name: '3-Piece Gameling Utensil Set',
@@ -245,7 +216,6 @@ const products = {
     }
 };
 
-// Проверяем, существует ли продукт с таким ID
 if (products[productId]) {
     const product = products[productId];
     document.getElementById('product-name').innerText = product.name;
