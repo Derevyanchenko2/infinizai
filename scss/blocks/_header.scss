@@ -9,6 +9,10 @@
     bottom: auto;
     z-index: 1001;
     background: transparent;
+    @media(max-width:768px){
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 }
 
 .header-wrapper {

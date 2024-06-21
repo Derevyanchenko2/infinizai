@@ -7,6 +7,9 @@
     margin-right: auto;
     margin-left: auto;
     text-align: center;
+    @media(max-width:768px){
+        margin-bottom: 30px;
+    }
 }
 .results-heading__title {
     color: #222730;
@@ -22,6 +25,9 @@
     display: flex;
     justify-content: center;
     gap: 32px;
+    @media(max-width:992px){
+        flex-wrap: wrap;
+    }
 }
 .result-item {
     max-width: 216px;
@@ -34,6 +40,10 @@
     color: #141820;
     font-size: 72px;
     line-height: 86px;
+    @media(max-width:768px){
+        font-size: 60px;
+        line-height: 70px;
+    }
 }
 .result-item__desc{
     color: #161c2d;
