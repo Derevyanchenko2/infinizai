@@ -9,17 +9,32 @@
 
 .contact-row {
     display: flex;
+    @media(max-width:992px){
+        flex-wrap: wrap;
+    }
 }
 .contact-info {
     max-width: 525px;
     width: 100%;
     margin-right: 65px;
+    @media(max-width:1200px){
+        max-width: 425px;
+        margin-right: 40px;
+    }
+    @media(max-width:992px){
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
 }
 .contact-title {
     margin-bottom: 24px;
     font-weight: 700;
     font-size: 36px;
     line-height: 46px;
+    @media(max-width:768px){
+        font-size: 30px;
+    }
 }
 .contact-text {
     margin-bottom: 56px;
@@ -28,6 +43,12 @@
     line-height: 26px;
     font-weight: 400;
     text-transform: capitalize;
+    @media(max-width:992px){
+        margin-bottom: 30px;
+    }
+    @media(max-width:768px){
+        margin-bottom: 25px;
+    }
 }
 .contact-socials{
     display: flex;
@@ -44,20 +65,34 @@
         font-size: 20px;
         line-height: 30px;
         font-weight: 500;
+        @media(max-width:992px){
+            margin-left: 0;
+            font-size: 15px;
+            line-height: 25px;
+        }
     }
 }
 .contact-form{
     max-width: 753px;
     width: 100%;
+    @media(max-width:992px){
+        max-width: 100%;
+    }
 }
 .flex-fields {
     display: flex;
     justify-content: space-between;
+    @media(max-width:460px){
+        flex-direction: column;
+    }
 }
 
 .single-field {
     margin-bottom: 20px;
     width: 48%;
+    @media(max-width:460px){
+        width: 100%;
+    }
 }
 
 .single-field.mail, .single-field.message {
