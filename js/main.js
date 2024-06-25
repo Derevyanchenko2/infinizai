@@ -169,62 +169,67 @@ document.addEventListener('DOMContentLoaded', function() {
 // The code updates a product page based on the 'id' in the URL, displaying the product's name, price, image, and description. 
 // If the product is not found, it shows a 'Player Not Found' message.
 
-const urlParams = new URLSearchParams(window.location.search);
-const productId = urlParams.get('id');
+// Correct product script
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
 
-const products = {
-    1: {
-        name: '3-Piece Gameling Utensil Set',
-        price: '$19.99 USD',
-        image: './images/products-img/1.png',
-        description: 'Detailed description of the 3-Piece Gameling Utensil Set.'
-    },
-    2: {
-        name: 'Wall Top Tshirt Frame',
-        price: '$19.99 USD',
-        image: './images/products-img/2.png',
-        description: 'Detailed description of the Wall Top Tshirt Frame.'
-    },
-    3: {
-        name: 'Drawer Unit On Casters',
-        price: '$19.99 USD',
-        image: './images/products-img/3.png',
-        description: 'Detailed description of the Drawer Unit On Casters.'
-    },
-    4: {
-        name: 'Wall Changing Table Mount',
-        price: '$19.99 USD',
-        image: './images/products-img/4.png',
-        description: 'Detailed description of the Wall Changing Table Mount.'
-    },
-    5: {
-        name: 'Intermedi Connect Cord',
-        price: '$19.99 USD',
-        image: './images/products-img/5.png',
-        description: 'Detailed description of the Intermedi Connect Cord.'
-    },
-    6: {
-        name: 'Duvet Cover And Pillowsham(s)',
-        price: '$19.99 USD',
-        image: './images/products-img/6.png',
-        description: 'Detailed description of the Duvet Cover And Pillowsham(s).'
+    const products = {
+        1: {
+            name: '3-Piece Gameling Utensil Set',
+            price: '$19.99 USD',
+            image: './images/products-img/1.png',
+            description: 'Detailed description of the 3-Piece Gameling Utensil Set.'
+        },
+        2: {
+            name: 'Wall Top Tshirt Frame',
+            price: '$19.99 USD',
+            image: './images/products-img/2.png',
+            description: 'Detailed description of the Wall Top Tshirt Frame.'
+        },
+        3: {
+            name: 'Drawer Unit On Casters',
+            price: '$19.99 USD',
+            image: './images/products-img/3.png',
+            description: 'Detailed description of the Drawer Unit On Casters.'
+        },
+        4: {
+            name: 'Wall Changing Table Mount',
+            price: '$19.99 USD',
+            image: './images/products-img/4.png',
+            description: 'Detailed description of the Wall Changing Table Mount.'
+        },
+        5: {
+            name: 'Intermedi Connect Cord',
+            price: '$19.99 USD',
+            image: './images/products-img/5.png',
+            description: 'Detailed description of the Intermedi Connect Cord.'
+        },
+        6: {
+            name: 'Duvet Cover And Pillowsham(s)',
+            price: '$19.99 USD',
+            image: './images/products-img/6.png',
+            description: 'Detailed description of the Duvet Cover And Pillowsham(s).'
+        }
+    };
+
+    if (products[productId]) {
+        const product = products[productId];
+        document.getElementById('product-name').innerText = product.name;
+        document.getElementById('product-price').innerText = product.price;
+        document.getElementById('product-image').src = product.image;
+        document.getElementById('product-description').innerText = product.description;
+        document.getElementById('product-name-breadcrumb').innerText = product.name;
+    } else {
+        document.getElementById('product-name').innerText = 'Product Not Found';
+        document.getElementById('product-price').innerText = '';
+        document.getElementById('product-image').src = '';
+        document.getElementById('product-description').innerText = '';
+        document.getElementById('product-name-breadcrumb').innerText = '';
     }
-};
+});
 
-if (products[productId]) {
-    const product = products[productId];
-    document.getElementById('product-name').innerText = product.name;
-    document.getElementById('product-price').innerText = product.price;
-    document.getElementById('product-image').src = product.image;
-    document.getElementById('product-description').innerText = product.description;
-    document.getElementById('product-name-breadcrumb').innerText = product.name;
-}else {
-    document.getElementById('playerName').innerText = 'Player Not Found';
-}
-
-
-
-// tabs
+// Tabs script
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
 
@@ -248,3 +253,55 @@ document.addEventListener('DOMContentLoaded', function () {
         activeTab.click();
     }
 });
+
+// Correct article script
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const articleId = urlParams.get('id');
+
+    const articles = {
+        1: {
+            title: 'Esports Group teams up with the Indianapolis Colts',
+            date: 'April 2, 2021',
+            image: './images/news-img/1.png',
+            content: 'Detailed content of the Esports Group teams up with the Indianapolis Colts.'
+        },
+        2: {
+            title: 'NAVI reveals s1mple fifth anniversary',
+            date: 'April 2, 2021',
+            image: './images/news-img/2.png',
+            content: 'Detailed content of the NAVI reveals s1mple fifth anniversary.'
+        },
+        3: {
+            title: 'A1esports Shares new picture',
+            date: 'April 2, 2021',
+            image: './images/news-img/3.png',
+            content: 'Detailed content of the A1esports Shares new picture.'
+        },
+        4: {
+            title: 'T1 unveil partnership with Razer',
+            date: 'April 2, 2021',
+            image: './images/news-img/4.png',
+            content: 'Detailed content of the T1 unveil partnership with Razer.'
+        },
+        5: {
+            title: 'RX secures content partnership with',
+            date: 'April 2, 2021',
+            image: './images/news-img/5.png',
+            content: 'Detailed content of the RX secures content partnership with.'
+        }
+    };
+
+    if (articles[articleId]) {
+        const article = articles[articleId];
+        document.getElementById('article-title').innerText = article.title;
+        document.getElementById('article-date').innerText = article.date;
+        document.getElementById('article-image').src = article.image;
+        document.getElementById('article-content-text').innerText = article.content;
+    } else {
+        document.getElementById('article-title').innerText = 'Article Not Found';
+        document.getElementById('article-date').innerText = '';
+        document.getElementById('article-image').src = '';
+        document.getElementById('article-content-text').innerText = '';
+    }
+};
