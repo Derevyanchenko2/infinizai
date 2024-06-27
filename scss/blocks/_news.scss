@@ -25,12 +25,25 @@
         flex: 0 100%;
         max-width: 100%;
     }
+    &--first{
+        @media(max-width:768px){
+            margin-bottom: 40px;
+        }
+    }
 }
 .news-column__item {
     max-width: 312px;
     width: 100%;
+    @media(max-width:768px){
+        max-width: 100%;
+    }
     &:not(:nth-last-child(-n+2)){
         margin-bottom: 16px;
+    }
+    img{
+        @media(max-width:768px){
+            width: 100%;
+        }
     }
 }
 .news-date__first-column{
@@ -70,6 +83,9 @@
     display: flex;
     flex-wrap: wrap;
     gap:24px;
+    @media(max-width:768px){
+        gap: 40px;
+    }
 }
 
 .news-date {
