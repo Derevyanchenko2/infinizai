@@ -35,9 +35,6 @@
                 <li class="mobileMenu-item">
                     <a class="mobileMenu-link" href="./products-page.html">Shop</a>
                 </li>
-                <li class="mobileMenu-item">
-                    <a class="mobileMenu-link" href="./blog-page.html">Blog</a>
-                </li>
                 <li>
                     <a href="./contact-page.html" class="contact-btn header-button header-button--mobile">Contact Us</a>
                 </li>
@@ -64,12 +61,9 @@
                 <li>
                     <a href="./products-page.html">Shop</a>
                 </li>
-                <li>
-                    <a href="./blog-page.html">Blog</a>
-                </li>
             </ul>
             <div class="header-right">
-                <a href="#" class="cart-wrapper">
+                <a href="#" class="cart-wrapper" onclick="toggleCart()">
                     <img src="./images/basket.svg" alt="basket">
                     <span class="basket-num">0</span>
                 </a>
@@ -85,7 +79,22 @@
         </div>
     </div>
 </header>
-
+<div class="cart">
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button class="close-cart">&times;</button>
+    </div>
+    <div class="cart-items">
+        <!-- Cart items will be displayed here -->
+    </div>
+    <div class="cart-footer">
+        <div class="cart-footer__wrapper">
+            <span>Subtotal</span>
+            <span class="cart-footer__price total-price">$0.00 USD</span>
+        </div>
+        <button class="checkout-btn btn-primary">Continue to Checkout</button>
+    </div>
+</div>
             <main class="hero hero-team main-screen">
     <div class="container">
         <div class="hero-heading">
